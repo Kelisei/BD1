@@ -3,4 +3,4 @@ param(
     [string]$ScriptPath
 )
 
-Get-Content $ScriptPath | mysql -u root -p practica
+Get-Content -Raw $ScriptPath | mysql -u root -p practica

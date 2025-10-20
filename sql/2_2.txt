@@ -1,0 +1,27 @@
+Indique si las siguientes afirmaciones sobre triggers son verdaderas o falsas. Justifique las falsas.
+
+1. Un trigger se ejecuta únicamente cuando se inserta una fila en una tabla.
+
+Falso Un trigger puede ejecutarse en respuesta a tres tipos de eventos: INSERT, UPDATE o DELETE.
+
+2. Un trigger puede ejecutarse antes o después de la operación, esto es definido automáticamente según el tipo 
+de la operación (UPDATE, INSERT o DELETE)
+
+Falso. El momento de ejecución (BEFORE o AFTER) no se define automáticamente, lo define el programador.
+
+3. Todo trigger debe asociarse a una tabla en concreto.
+Verdadero. 
+
+4. NEW y OLD son palabras clave que permiten acceder a los valores de las filas afectadas y se pueden usar ambos 
+independientemente de la operación utilizada.
+
+Falso, depende del tipo de operacion.
+En insert solo se puede NEW.
+En update ambas.
+En delete OLD.
+
+5. FOR EACH ROW en un trigger se usa para indicar que el trigger se ejecutará una vez por cada fila afectada por 
+la operación.
+
+Verdadero. La cláusula FOR EACH ROW indica que el trigger se dispara por cada fila modificada por la operación.
+Si se omite, sería un trigger de nivel de sentencia (no soportado en MySQL).
